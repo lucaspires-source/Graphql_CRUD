@@ -3,6 +3,7 @@ import { graphqlHTTP } from 'express-graphql'
 import cors from 'cors'
 import { createConnection } from 'typeorm'
 import {schema} from './schema'
+import { Users } from './entities/users'
 const main = async () =>{
 await createConnection({
     type:"mysql",
@@ -11,7 +12,7 @@ await createConnection({
     password:"123456",
     logging:true,
     synchronize:false,
-    entities:[]
+    entities:[Users]
 })    
 const app = express()
 app.use(cors())

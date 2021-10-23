@@ -11,5 +11,6 @@ export const CREATE_USER ={
     },
     resolve(parent:any,args:any){
         const {name,username,password} = args
+        return args
     }
 }
