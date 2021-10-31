@@ -7,6 +7,7 @@ import {
 import "./App.css";
 import CreateUser from "./Components/CreateUser";
 import ListOfUsers from "./Components/ListOfUsers";
+import UpdatePassword from "./Components/UpdatePassword";
 function App() {
   const client = new ApolloClient({
     uri: "http://localhost:3001/graphql",
@@ -16,6 +17,7 @@ function App() {
     <>
     <ApolloProvider client={client}>
       <CreateUser />
+      <UpdatePassword />
       <ListOfUsers/>
     </ApolloProvider>
     </>

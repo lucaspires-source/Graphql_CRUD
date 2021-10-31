@@ -18,6 +18,8 @@ function ListOfUsers() {
                 Name:{user.name}
                 <br />
                 Username:{user.username}
+                <br />                
+                Password:{user.password}
                 <br />
                 <button
                   onClick={() => {
